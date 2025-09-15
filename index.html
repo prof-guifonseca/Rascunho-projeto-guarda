@@ -6,7 +6,8 @@
 <style>
   /* Estilos básicos e cores suaves para uma apresentação agradável */
   body {
-    font-family: "Arial", sans-serif;
+    /* Use a modern sans-serif font stack for better readability */
+    font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -14,74 +15,118 @@
     color: #2c3e50;
   }
   .container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 40px 20px;
+    /* Increase padding and roundness for a more spacious, card‑like look */
+    max-width: 950px;
+    margin: 20px auto;
+    padding: 50px 40px;
     background-color: #ffffff;
-    box-shadow: 0 0 12px rgba(0,0,0,0.05);
-    border-radius: 8px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
   }
   h1, h2, h3, h4 {
-    color: #174e70;
+    line-height: 1.3;
+    font-weight: 600;
+    color: #03396c;
     margin-top: 1.2em;
     margin-bottom: 0.6em;
-    line-height: 1.3;
   }
   h1 {
+    /* Center the main title and adjust size for hierarchy */
     font-size: 2.4em;
     text-align: center;
-    margin-bottom: 0.5em;
+    margin-top: 0;
+    margin-bottom: 0.7em;
+    font-weight: 700;
+    color: #012f57;
   }
   h2 {
-    font-size: 1.7em;
-    border-bottom: 2px solid #e3eef5;
-    padding-bottom: 4px;
+    /* Add a coloured accent bar to the left for section titles */
+    font-size: 1.8em;
+    padding-left: 12px;
+    border-left: 5px solid #03396c;
+    margin-top: 1.4em;
+    margin-bottom: 0.6em;
+    color: #03396c;
   }
   h3 {
     font-size: 1.4em;
-    color: #195d86;
+    color: #045a8d;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    font-weight: 600;
   }
   p {
-    margin: 0.5em 0;
+    margin: 0.6em 0 1em;
   }
   ul {
     margin: 0.5em 0 0.5em 1.5em;
+    padding-left: 0;
   }
   li {
-    margin: 0.3em 0;
+    margin-bottom: 0.5em;
   }
   table {
     width: 100%;
     border-collapse: collapse;
-    margin: 1em 0;
-    border-radius: 6px;
+    margin: 1.5em 0;
+    border-radius: 8px;
     overflow: hidden;
+    font-size: 0.95em;
   }
   table th, table td {
     border: 1px solid #cbd7e3;
-    padding: 8px 12px;
+    padding: 10px 12px;
     text-align: left;
+    vertical-align: top;
   }
   table th {
-    background-color: #eaf2f8;
-    color: #174e70;
+    background-color: #eff6fb;
+    color: #03396c;
+    font-weight: 600;
+  }
+  tbody tr:nth-child(even) td {
+    background-color: #f9fcfe;
   }
   .footnotes {
     font-size: 0.8em;
-    margin-top: 2em;
-    border-top: 1px solid #cccccc;
+    margin-top: 2.5em;
+    border-top: 1px solid #e0e0e0;
     padding-top: 1em;
+    color: #555;
   }
   .footnotes li {
-    margin-bottom: 0.5em;
+    margin-bottom: 0.6em;
   }
   a {
-    color: #2a80b9;
+    color: #1f6fa8;
     text-decoration: none;
   }
   a:hover {
     text-decoration: underline;
   }
+  /* Custom styling for the ODS list with coloured icons */
+  .ods-list {
+    list-style: none;
+    padding: 0;
+    margin: 0.5em 0;
+  }
+  .ods-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1em;
+  }
+  /* Icons for the ODS are now loaded as images rather than coloured circles. */
+  .ods-img {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    margin-right: 12px;
+    flex-shrink: 0;
+  }
+  .ods4 { background-color: #C5192D; }
+  .ods9 { background-color: #FD6925; }
+  .ods10 { background-color: #DD1367; }
+  .ods12 { background-color: #BF8B2E; }
 </style>
 </head>
 <body>
@@ -105,19 +150,18 @@
 </ul>
 
 <h2>4. Fundamentação teórica e contribuições dos docentes</h2>
-<h3>4.1 Cultura maker e inclusão digital</h3>
-<p>A cultura maker articula <strong>aprendizagem ativa</strong>, colaboração e uso criativo de tecnologias digitais para resolução de problemas. O artigo “Educação Maker: da Grécia antiga ao Brasil contemporâneo” observa que a evolução do movimento no Brasil está associada à democratização do aprendizado; as autoras relatam que, embora a abordagem desenvolva habilidades críticas e promova inclusão digital, ela também exige condições adequadas e <strong>formação contínua de educadores</strong><sup id="fnref1b"><a href="#fn1">[1]</a></sup>. Essa perspectiva justifica investir em formação docente e em políticas públicas para consolidar espaços maker.</p>
-
-<h3>4.2 Comunicação e letramento digital</h3>
+<!-- Introdução aos princípios transversais da cultura maker -->
+<p>A cultura maker se sustenta em princípios de <strong>aprendizagem ativa</strong>, colaboração e uso criativo de tecnologias para a resolução de problemas. Esses valores são transversais a todas as contribuições docentes descritas a seguir e orientam a formação continuada necessária para consolidar espaços maker inclusivos e sustentáveis.</p>
+<h3>4.1 Comunicação e letramento digital</h3>
 <p>As competências de comunicação e letramento digital serão trabalhadas de forma transversal. A profa. <strong>Cláudia Lopes Nascimento</strong>, especialista em sociodiscursivismo e semiologia, liderará a elaboração de módulos sobre produção textual, narrativa de projetos e uso de linguagens verbais e multimodais para documentar processos maker. O prof. <strong>Paulo Bassani</strong><sup id="fnref11"><a href="#fn11">[11]</a></sup>, cientista social com atuação em sociologia ambiental e sustentabilidade, contribuirá com reflexões socioambientais e estratégias de mobilização comunitária, integrando a dimensão social e ecológica às práticas de comunicação. Juntos, estimularão a criação de relatos, vídeos e podcasts acessíveis que conectem tecnologia, território e sustentabilidade.</p>
 
-<h3>4.3 Tecnologias digitais, programação e economia circular</h3>
+<h3>4.2 Tecnologias digitais, programação e economia circular</h3>
 <p>Esta dimensão reúne competências de computação, prototipagem e sustentabilidade. O prof. <strong>Jacques Duílio Brancher</strong> aportará sua experiência em informática na educação, Big Data e desenvolvimento de aplicativos para orientar a criação de ambientes virtuais de aprendizagem, sistemas de monitoramento e aplicações educacionais. A <strong>Eletro</strong>, centro de gestão de resíduos eletrônicos e economia circular, fornecerá materiais reaproveitados, orientará o descarte responsável e colaborará na produção de materiais educativos sobre desmontagem e <em>upcycling</em>. A <strong>NCS</strong>, atuando como braço pedagógico da Eletro, mediará a integração entre tecnologia, sustentabilidade e currículo, garantindo que os módulos de eletrônica, programação física e gestão de projetos incorporem princípios de economia circular e responsabilidade socioambiental. A articulação dessas frentes permitirá que os participantes desenvolvam protótipos inovadores com consciência ambiental.</p>
 
-<h3>4.4 Metodologias científicas e sustentabilidade socioambiental</h3>
+<h3>4.3 Metodologias científicas e sustentabilidade socioambiental</h3>
 <p>A abordagem científica e a sustentabilidade serão tratadas de forma integrada. A profa. <strong>Mariana Aparecida Bologna Soares de Andrade</strong>, com experiência em educação científica, história e filosofia da ciência e comunicação da ciência, desenvolverá módulos sobre metodologia científica, natureza da ciência e educação ambiental crítica. O prof. <strong>Paulo Bassani</strong> atuará como coorientador, trazendo sua expertise em sociologia ambiental, desenvolvimento sustentável e movimentos sociais para discutir temas como justiça ambiental, gestão ambiental participativa e articulação entre ciência e sociedade. As atividades fomentarão projetos de ciência cidadã, monitoramento ambiental e soluções sustentáveis que envolvam a comunidade do bairro Aeroporto.</p>
 
-<h3>4.5 Dimensão sociopolítica, ética e cidadania</h3>
+<h3>4.4 Dimensão sociopolítica, ética e cidadania</h3>
 <p>A dimensão sociopolítica e ética perpassará todas as ações do projeto. O prof. <strong>Darcísio Natal Muraro</strong> abordará princípios de pedagogia crítica, ética digital e direitos humanos, promovendo rodas de conversa e reflexões sobre poder, tecnologia e cidadania inspiradas em Paulo Freire. O prof. <strong>Paulo Bassani</strong> complementará com análises de sociologia ambiental e rural, gestão ambiental e movimentos sociais, ressaltando o papel da participação social na construção de comunidades sustentáveis. Essa integração garantirá que os projetos maker não apenas produzam artefatos, mas também promovam empoderamento, consciência crítica e compromisso com os ODS.</p>
 
 <h2>5. Metodologia</h2>
@@ -134,7 +178,7 @@
 </ul>
 
 <h3>5.2 Fase II – Formação modular (20 horas por módulo)</h3>
-<p>A formação será estruturada em <strong>módulos integrados</strong> de 20 horas, abertos aos educadores sociais, licenciandos dos cursos de Letras, Computação, Educação e Biologia e, posteriormente, aos educandos. Cada módulo combinará aulas teóricas, práticas mão‑na‑massa e atividades assíncronas, e contará com objetivos claros e critérios de avaliação formativa. Para dar maior robustez à formação, as avaliações considerarão não apenas os produtos finais, mas também a <strong>experiência de aprendizagem, colaboração e perseverança dos participantes</strong><sup id="fnref8b"><a href="#fn8">[8]</a></sup>. Os módulos propostos são apresentados na tabela a seguir:</p>
+<p>A formação será estruturada em <strong>módulos integrados</strong> de 20&nbsp;horas, abertos aos educadores sociais, licenciandos dos cursos de Letras, Computação, Educação e Biologia e, posteriormente, aos educandos. Cada módulo combinará aulas teóricas, práticas mão‑na‑massa e atividades assíncronas, e contará com objetivos claros e critérios de avaliação formativa. Para dar maior robustez à formação, as avaliações considerarão não apenas os produtos finais, mas também a <strong>experiência de aprendizagem, colaboração e perseverança dos participantes</strong><sup id="fnref8b"><a href="#fn8">[8]</a></sup>. Além disso, será incluído um módulo específico de <strong>empreendedorismo social</strong>, que incentivará os participantes a pesquisar problemas na comunidade, propor soluções inovadoras e transformar essas soluções em negócios de impacto. Os módulos propostos são apresentados na tabela a seguir:</p>
 
 <table>
 <thead>
@@ -175,6 +219,11 @@
 <td>Planejamento e gestão ágil (Scrum, Kanban); trabalho em equipe e liderança; parceria com a comunidade; captação de recursos; design de experiências; técnicas de pitch e apresentação de projetos; princípios de empreendedorismo social.</td>
 <td>NCS, Eletro, docentes (incluindo Paulo Bassani)</td>
 </tr>
+ <tr>
+   <td><strong>Empreendedorismo social e inovação</strong></td>
+   <td>Pesquisa participativa na comunidade para identificar problemas e oportunidades; design de modelos de negócios sociais (Canvas e Lean&nbsp;Startup); elaboração de planos de negócios de impacto; estudo de casos de cooperativas e startups comunitárias; preparação para ideathons/hackathons e desenvolvimento de <em>pitches</em>.</td>
+   <td>NCS, docentes da UEL especializados em administração e empreendedorismo, com apoio de mentores externos</td>
+ </tr>
 </tbody>
 </table>
 
@@ -183,12 +232,14 @@
 <h3>5.3 Fase III – Laboratórios de co‑criação</h3>
 <p>Com base na formação recebida, os participantes formarão <strong>equipes interdisciplinares</strong> para desenvolver projetos que respondam a desafios reais da comunidade. O ciclo de criação seguirá etapas inspiradas no <strong>design thinking</strong> e modelos como Launch Cycle e uTEC Maker, valorizando o <strong>brincar, a empatia, a experimentação e a mentalidade empreendedora</strong><sup id="fnref8c"><a href="#fn8">[8]</a></sup>:</p>
 <ul>
-  <li><strong>Empatia e definição do desafio:</strong> as equipes investigarão problemas locais, realizarão entrevistas, caminhadas exploratórias e observações, buscando compreender as necessidades e sonhos dos moradores. Serão formulados enunciados de desafio claros, contendo público, necessidade e propósito.</li>
+  <li><strong>Empatia e definição do desafio:</strong> as equipes investigarão problemas locais por meio de pesquisa participativa (entrevistas, questionários, caminhadas exploratórias e observações), buscando compreender as necessidades e sonhos dos moradores e identificar oportunidades de negócio de impacto. Serão formulados enunciados de desafio claros, contendo público, necessidade, propósito e potencial de sustentabilidade social e econômica.</li>
   <li><strong>Ideação:</strong> sessões de brainstorming, mapeamento de ideias com uso de métodos divergentes e convergentes (como SCAMPER e 6‑3‑5) para gerar múltiplas soluções. As equipes serão incentivadas a desenhar, construir maquetes simples e valorizar a criatividade sem julgamentos.</li>
   <li><strong>Prototipagem rápida:</strong> construção de protótipos de baixa fidelidade com materiais simples (papel, papelão, LEGO, sucata) e uso de softwares de modelagem (TinkerCad) para testar conceitos e funcionalidades. A cultura do erro será destacada como parte do processo de aprendizagem, favorecendo a perseverança<sup id="fnref8d"><a href="#fn8">[8]</a></sup>.</li>
   <li><strong>Construção e iteração:</strong> desenvolvimento do protótipo final utilizando ferramentas do Complexo Maker (impressoras 3D, CNC, soldagem, Arduino, ferramentas manuais). Cada ciclo incluirá testes com usuários reais (educandos, familiares, comunidade), coleta de feedback e refinamento iterativo. Serão discutidos aspectos de viabilidade técnica, sustentabilidade, custos e potenciais modelos de negócios.</li>
   <li><strong>Documentação e comunicação:</strong> registro detalhado do processo (textos, fotos, vídeos, esquemas, código‑fonte), elaboração de manuais de uso e materiais de divulgação (postagens, vídeos, podcast) em linguagem acessível. O respeito à ética, privacidade e direitos autorais será assegurado.</li>
   <li><strong>Apresentação, feedback e mentoria:</strong> organização de uma <em>mostra maker</em> na Guarda Mirim e participação em eventos externos. As equipes apresentarão seus projetos para um público diverso (comunidade, professores, especialistas), receberão críticas construtivas e orientações de mentores (professores da UEL, profissionais convidados, alumni). O feedback será registrado e incorporado nos planos de melhoria.</li>
+
+  <li><strong>Ideathon/hackathon:</strong> ao final do ciclo, será promovido um <em>ideathon/hackathon</em> para acelerar a geração de soluções empreendedoras. Durante este evento intensivo, as equipes irão refinar suas ideias, construir protótipos, elaborar planos de negócios sociais e apresentar <em>pitches</em> a uma banca de especialistas e mentores.</li>
 </ul>
 <p>Cada equipe terá um professor orientador e um monitor bolsista. Serão promovidos <strong>encontros semanais</strong> para acompanhamento técnico e pedagógico, além do uso de ferramentas digitais colaborativas (Trello para gestão de tarefas, GitHub/Lab para código, Google Workspace para documentação). As atividades valorizarão a <strong>interdisciplinaridade</strong> e a <strong>articulação comunitária</strong>, convidando parceiros externos (ONGs, empresas, laboratórios públicos) para contribuir com mentorias e patrocínios.</p>
 
@@ -196,7 +247,7 @@
 <p>Finalizado o ciclo de co‑criação, serão implementadas estratégias para garantir a continuidade e o <strong>alcance do projeto</strong>, transformando o Complexo Maker em um <em>hub</em> permanente de inovação social:</p>
 <ul>
   <li><strong>Repositório aberto e kits replicáveis:</strong> os materiais produzidos (guias, códigos, desenhos, planos de aula) serão disponibilizados em plataforma digital administrada pela NCS, sob licenças Creative Commons. Serão elaborados <em>kits maker</em> com listas de materiais, instruções passo a passo e vídeos, facilitando a replicação em escolas e centros comunitários.</li>
-  <li><strong>Eventos e mostras:</strong> realização de feiras maker semestrais, hackathons e oficinas abertas ao público, com exposição dos protótipos e rodas de debate sobre tecnologia, inclusão e sustentabilidade. Esses eventos servirão para sensibilizar novos parceiros e ampliar a visibilidade do complexo.</li>
+  <li><strong>Eventos, mostras e ideathons:</strong> realização de feiras maker semestrais, <em>ideathons/hackathons</em> e oficinas abertas ao público, com exposição dos protótipos, apresentações de planos de negócios sociais e rodas de debate sobre tecnologia, inclusão e sustentabilidade. Esses eventos servirão para sensibilizar novos parceiros, atrair investidores e ampliar a visibilidade do complexo.</li>
   <li><strong>Rede de multiplicadores e formação continuada:</strong> formação de educadores como formadores de outros educadores (“train the trainer”), garantindo que novos participantes sejam capacitados regularmente. A rede de multiplicadores atuará em escolas públicas, ONGs e empresas, fortalecendo a cultura maker em Londrina.</li>
   <li><strong>Programa de mentoria comunitária:</strong> engajamento de universitários e profissionais voluntários das áreas de tecnologia, educação, design e sustentabilidade para apoiar projetos futuros e auxiliar na manutenção do laboratório. Será criado um banco de mentores e uma agenda de plantões.</li>
   <li><strong>Prospecção de financiamento e parcerias:</strong> elaboração de propostas para editais de extensão, inovação e desenvolvimento social; campanhas de financiamento coletivo; parcerias com empresas (responsabilidade social corporativa) e órgãos públicos para aquisição e manutenção de equipamentos. Serão consideradas oportunidades de incubação de projetos e de geração de renda para os educandos.</li>
@@ -214,15 +265,15 @@
 <li><strong>Nossa Comunidade Sustentável e Eletro</strong> – instituições parceiras responsáveis pela coordenação geral, articulação comunitária, apoio técnico e divulgação institucional.</li>
 </ul>
 
-<h2>7. Cronograma proposto (12 meses)</h2>
+<h2>7. Cronograma proposto (24 meses)</h2>
 <table>
 <thead><tr><th>Mês</th><th>Atividades principais</th></tr></thead>
 <tbody>
-<tr><td>1–2</td><td>Fase I: diagnóstico (entrevistas, questionários, reuniões com a comunidade), elaboração do mapa de ativos e desafios e planejamento detalhado; aquisição de equipamentos.</td></tr>
-<tr><td>3–6</td><td>Fase II: realização dos módulos de formação (um ou dois módulos por mês); seleção e capacitação de bolsistas; instalação e organização do laboratório; desenvolvimento dos microprojetos e avaliações formativas.</td></tr>
-<tr><td>7–10</td><td>Fase III: laboratórios de co‑criação – planejamento e execução dos projetos interdisciplinares; acompanhamento e mentorias semanais; uso das ferramentas e do espaço maker; registro detalhado do processo.</td></tr>
-<tr><td>11</td><td>Fase IV: mostra maker, feiras e eventos públicos; publicização dos resultados; início do programa de mentoria comunitária e consolidação do repositório.</td></tr>
-<tr><td>12</td><td>Produção de relatórios técnicos e científicos; publicação de materiais no repositório; prospecção de novos financiamentos e planejamento do ciclo seguinte.</td></tr>
+<tr><td>1–3</td><td><strong>Fase I:</strong> diagnóstico (entrevistas, questionários, reuniões com a comunidade), elaboração do mapa de ativos e desafios e planejamento detalhado; aquisição de equipamentos.</td></tr>
+<tr><td>4–9</td><td><strong>Fase II:</strong> realização dos módulos de formação (um ou dois módulos por mês), incluindo o novo módulo de empreendedorismo social; pesquisa participativa na comunidade para identificar problemas e oportunidades de negócio; seleção e capacitação de bolsistas e membros da comunidade (incluindo guardas mirins); instalação e organização do laboratório; desenvolvimento dos microprojetos e avaliações formativas.</td></tr>
+<tr><td>10–15</td><td><strong>Fase III:</strong> laboratórios de co‑criação – planejamento e execução dos projetos interdisciplinares e de negócios sociais; acompanhamento e mentorias semanais; uso das ferramentas e do espaço maker; realização de ideathons/hackathons para cocriar soluções inovadoras; pesquisa de modelos de negócio e prototipagem; registro detalhado do processo.</td></tr>
+<tr><td>16–20</td><td><strong>Fase IV (difusão inicial):</strong> mostra maker, feiras e eventos públicos; ideathons/hackathons para difusão e aceleração dos projetos; publicização dos resultados; programa de mentoria comunitária; consolidação do repositório e apoio aos replicadores.</td></tr>
+<tr><td>21–24</td><td><strong>Consolidação e expansão:</strong> produção de relatórios técnicos e científicos; publicação de materiais no repositório; formação continuada dos multiplicadores; prospecção de novos financiamentos; replicação dos kits em outras escolas e centros comunitários; planejamento do ciclo seguinte.</td></tr>
 </tbody>
 </table>
 
@@ -252,29 +303,20 @@
 <p>O projeto articula <strong>quatro centros de estudos da UEL</strong> (CCE, CCB, CECA, CLCH) e promove a interação entre ensino, pesquisa e extensão. A participação de licenciandos proporciona vivência docente em ambiente informal e fortalece os vínculos com a comunidade. O envolvimento da NCS e do Eletro traz a perspectiva de inovação social e sustentabilidade, enquanto a Guarda Mirim expande suas ações formativas. Ao dialogar com os conceitos de educação maker, filosofia da educação e ensino de ciências, a proposta contribui para consolidar Londrina como referência em educação popular técnica e inovação pedagógica.</p>
 
 <h2>12. Vinculação aos Objetivos de Desenvolvimento Sustentável (ODS)</h2>
-<p>Esta proposta está alinhada aos <strong>Objetivos de Desenvolvimento Sustentável (ODS)</strong> da Agenda 2030, que orientam ações globais para erradicação da pobreza, proteção do planeta e prosperidade para todos. De maneira específica:</p>
-<ul>
-  <li><strong>ODS 4 – Educação de Qualidade:</strong> a formação intergeracional e inclusiva para educadores sociais, licenciandos e educandos promove aprendizagem ao longo da vida e melhora a qualidade da educação.</li>
-  <li><strong>ODS 5 – Igualdade de Gênero:</strong> as atividades do complexo estimulam a participação de meninas e mulheres nas áreas de ciência, tecnologia e inovação, combatendo estereótipos de gênero no universo maker.</li>
-  <li><strong>ODS 9 – Indústria, Inovação e Infraestrutura:</strong> o fortalecimento do Complexo Maker como espaço de inovação social e tecnológica fomenta a prototipagem de soluções e o desenvolvimento de infraestrutura comunitária resiliente.</li>
-  <li><strong>ODS 10 – Redução das Desigualdades:</strong> ao ampliar a inclusão digital e oferecer oportunidades formativas para jovens de contextos socialmente vulneráveis, o projeto contribui para diminuir as desigualdades regionais.</li>
-  <li><strong>ODS 11 – Cidades e Comunidades Sustentáveis:</strong> a participação comunitária e a co‑criação de soluções sustentáveis visam tornar o bairro Aeroporto mais inclusivo, seguro e resiliente.</li>
-  <li><strong>ODS 12 – Consumo e Produção Responsáveis:</strong> a parceria com a Eletro incentiva a reutilização de materiais eletrônicos, a economia circular e práticas de fabricação sustentável.</li>
-  <li><strong>ODS 13 – Ação Contra a Mudança Global do Clima:</strong> os módulos de educação ambiental e ciência cidadã sensibilizam para a mitigação das mudanças climáticas e promovem projetos que utilizam energias renováveis.</li>
-  <li><strong>ODS 17 – Parcerias e Meios de Implementação:</strong> a rede colaborativa entre UEL, Guarda Mirim, NCS, Eletro, comunidade e demais parceiros fortalece as sinergias necessárias para o alcance dos ODS.</li>
+<p>Esta proposta está alinhada aos <strong>Objetivos de Desenvolvimento Sustentável (ODS)</strong> da Agenda 2030, que orientam ações globais para erradicação da pobreza, proteção do planeta e prosperidade para todos. Para dar foco e equilíbrio na comunicação, priorizamos os quatro objetivos que mais dialogam com a essência do Complexo Maker:</p>
+<ul class="ods-list">
+  <li><img src="ods4.jpg" alt="ODS 4 – Educação de Qualidade" class="ods-img"><strong>ODS 4 – Educação de Qualidade:</strong> a formação intergeracional e inclusiva para educadores sociais, licenciandos e educandos promove aprendizagem ao longo da vida e aprimora a qualidade da educação.</li>
+  <li><img src="ods9.jpg" alt="ODS 9 – Indústria, Inovação e Infraestrutura" class="ods-img"><strong>ODS 9 – Indústria, Inovação e Infraestrutura:</strong> ao fortalecer o Complexo Maker como espaço de inovação social e tecnológica, o projeto estimula a prototipagem de soluções e o desenvolvimento de infraestrutura comunitária resiliente.</li>
+  <li><img src="ods10.jpg" alt="ODS 10 – Redução das Desigualdades" class="ods-img"><strong>ODS 10 – Redução das Desigualdades:</strong> ampliando a inclusão digital e oferecendo oportunidades formativas para jovens de contextos socialmente vulneráveis, a iniciativa contribui para diminuir as desigualdades regionais.</li>
+  <li><img src="ods12.jpg" alt="ODS 12 – Consumo e Produção Responsáveis" class="ods-img"><strong>ODS 12 – Consumo e Produção Responsáveis:</strong> a parceria com a Eletro incentiva a reutilização de materiais eletrônicos e práticas de economia circular, reforçando a dimensão sustentável da fabricação digital.</li>
 </ul>
 
 <div class="footnotes">
 <ol>
-<li id="fn1">Baseado no artigo que reflete sobre a evolução da educação maker no Brasil e destaca a democratização do aprendizado e a necessidade de formação contínua de educadores【401684688131576†L55-L66】. <a href="#fnref1" title="Retornar ao texto">↩</a></li>
-<li id="fn2">Observa a presença da epistemologia da interação sociodiscursiva de Genebra nos documentos oficiais de ensino de Português【698353131512870†L107-L111】. <a href="#fnref2" title="Retornar ao texto">↩</a></li>
-<li id="fn3">Enfatiza a importância de avançar em questões teóricas e aplicadas para ampliar as ferramentas do professor no trabalho com o texto【698353131512870†L142-L146】. <a href="#fnref3" title="Retornar ao texto">↩</a></li>
-<li id="fn4">Apresenta mapeamento sistemático sobre recursos educacionais digitais na educação básica brasileira【401225927449243†L34-L43】. <a href="#fnref4" title="Retornar ao texto">↩</a></li>
-<li id="fn5">Analisa técnicas de integração de dados heterogêneos e Big Data para resolver problemas de integração de dados【401225927449243†L56-L64】. <a href="#fnref5" title="Retornar ao texto">↩</a></li>
-<li id="fn7">Referência às áreas de expertise da professora Mariana A. B. S. de Andrade【22468809203957†L63-L76】. <a href="#fnref7" title="Retornar ao texto">↩</a></li>
-<li id="fn8">Relata atributos comuns às metodologias de design thinking aplicadas a makerspaces, como foco no brincar, na empatia, na mentalidade empreendedora e na possibilidade de falhar e aprender【489697228779226†L70-L87】; destaca que modelos como Launch Cycle e uTEC Maker levam os participantes desde a conscientização do problema até a apresentação do produto final, promovendo a progressão de competências e a colaboração【489697228779226†L90-L95】. <a href="#fnref8" title="Retornar ao texto">↩</a></li>
-<li id="fn10">Salienta que a adoção de modelos de design thinking requer planejamento, financiamento adequado e estrutura de avaliação clara; a ausência de avaliação dos estudantes frequentemente decorre de projetos mal estruturados, não da natureza dos makerspaces【489697228779226†L103-L111】. <a href="#fnref10" title="Retornar ao texto">↩</a></li>
-<li id="fn11">Resume a formação e a área de atuação de Paulo Bassani, destacando sua graduação em Filosofia, mestrado em Sociologia, doutorado em Ciências Sociais e experiência em sociologia ambiental, sustentabilidade, educação ambiental e movimentos sociais【944309519279515†L66-L79】. <a href="#fnref11" title="Retornar ao texto">↩</a></li>
+<li id="fn1">Baseado no artigo que reflete sobre a evolução da educação maker no Brasil e destaca a democratização do aprendizado e a necessidade de formação contínua de educadores. <a href="#fnref1" title="Retornar ao texto">↩</a></li>
+<li id="fn8">Relata atributos comuns às metodologias de design thinking aplicadas a makerspaces, como foco no brincar, na empatia, na mentalidade empreendedora e na possibilidade de falhar e aprender; destaca que modelos como Launch Cycle e uTEC Maker levam os participantes desde a conscientização do problema até a apresentação do produto final, promovendo a progressão de competências e a colaboração. <a href="#fnref8" title="Retornar ao texto">↩</a></li>
+<li id="fn10">Salienta que a adoção de modelos de design thinking requer planejamento, financiamento adequado e estrutura de avaliação clara; a ausência de avaliação dos estudantes frequentemente decorre de projetos mal estruturados, não da natureza dos makerspaces. <a href="#fnref10" title="Retornar ao texto">↩</a></li>
+<li id="fn11">Resume a formação e a área de atuação de Paulo Bassani, destacando sua graduação em Filosofia, mestrado em Sociologia, doutorado em Ciências Sociais e experiência em sociologia ambiental, sustentabilidade, educação ambiental e movimentos sociais. <a href="#fnref11" title="Retornar ao texto">↩</a></li>
 </ol>
 </div>
 </div>
