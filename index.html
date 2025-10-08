@@ -1,353 +1,602 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
-<meta charset="UTF-8">
-<title>Programa de Extensão - Guarda Mirim Tech</title>
-<style>
-  /* Estilos básicos e cores suaves para uma apresentação agradável */
-  body {
-    /* Use a modern sans-serif font stack for better readability */
-    font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f8fa;
-    color: #2c3e50;
-  }
-  .container {
-    /* Increase padding and roundness for a more spacious, card‑like look */
-    max-width: 950px;
-    margin: 20px auto;
-    padding: 50px 40px;
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
-  }
-  h1, h2, h3, h4 {
-    line-height: 1.3;
-    font-weight: 600;
-    color: #03396c;
-    margin-top: 1.2em;
-    margin-bottom: 0.6em;
-  }
-  h1 {
-    /* Center the main title and adjust size for hierarchy */
-    font-size: 2.4em;
-    text-align: center;
-    margin-top: 0;
-    margin-bottom: 0.7em;
-    font-weight: 700;
-    color: #012f57;
-  }
-  h2 {
-    /* Add a coloured accent bar to the left for section titles */
-    font-size: 1.8em;
-    padding-left: 12px;
-    border-left: 5px solid #03396c;
-    margin-top: 1.4em;
-    margin-bottom: 0.6em;
-    color: #03396c;
-  }
-  h3 {
-    font-size: 1.4em;
-    color: #045a8d;
-    margin-top: 1em;
-    margin-bottom: 0.5em;
-    font-weight: 600;
-  }
-  p {
-    margin: 0.6em 0 1em;
-  }
-  ul {
-    margin: 0.5em 0 0.5em 1.5em;
-    padding-left: 0;
-  }
-  li {
-    margin-bottom: 0.5em;
-  }
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 1.5em 0;
-    border-radius: 8px;
-    overflow: hidden;
-    font-size: 0.95em;
-  }
-  table th, table td {
-    border: 1px solid #cbd7e3;
-    padding: 10px 12px;
-    text-align: left;
-    vertical-align: top;
-  }
-  table th {
-    background-color: #eff6fb;
-    color: #03396c;
-    font-weight: 600;
-  }
-  tbody tr:nth-child(even) td {
-    background-color: #f9fcfe;
-  }
-  .footnotes {
-    font-size: 0.8em;
-    margin-top: 2.5em;
-    border-top: 1px solid #e0e0e0;
-    padding-top: 1em;
-    color: #555;
-  }
-  .footnotes li {
-    margin-bottom: 0.6em;
-  }
-  a {
-    color: #1f6fa8;
-    text-decoration: none;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
-  /* Custom styling for the ODS list with coloured icons */
-  .ods-list {
-    list-style: none;
-    padding: 0;
-    margin: 0.5em 0;
-  }
-  .ods-list li {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 1em;
-  }
-  /* Ícones dos ODS são círculos coloridos gerados por CSS */
-  .ods-img {
-    display: inline-block;
-    width: 36px;
-    height: 36px;
-    margin-right: 12px;
-    flex-shrink: 0;
-    border-radius: 50%;
-  }
-  .ods4 { background-color: #C5192D; }
-  .ods9 { background-color: #FD6925; }
-  .ods10 { background-color: #DD1367; }
-  .ods12 { background-color: #BF8B2E; }
-</style>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Programa de Extensão - Guarda Mirim Tech</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
 </head>
 <body>
-<div class="container">
-<h1>Programa de Extensão - Guarda Mirim Tech</h1>
-
-<h2>1. Contexto e justificativa</h2>
-<p>A Guarda Mirim de Londrina procurou a <strong>Universidade Estadual de Londrina (UEL)</strong> solicitando apoio para estruturar um processo de formação em cultura maker e inclusão digital. Em resposta a essa demanda, docentes de diferentes centros da UEL, juntamente com a <strong>Nossa Comunidade Sustentável (NCS)</strong> e a <strong>Eletro</strong>, construíram esta proposta para organizar e dinamizar o <strong>Guarda Mirim Tech</strong> que está sendo instalado na sede da Guarda Mirim, no bairro Aeroporto. O espaço deverá fomentar <strong>inclusão digital, cultura maker e formação técnica</strong> para os educadores sociais e educandos. A literatura sobre educação maker ressalta que esse movimento, ao recuperar o <em>aprender‑fazendo</em>, conecta bases filosóficas e históricas à prática contemporânea e <strong>democratiza o aprendizado</strong>, desenvolvendo habilidades críticas; contudo, também aponta desafios como a sustentabilidade financeira e a formação específica de docentes<sup id="fnref1"><a href="#fn1">[1]</a></sup>. A proposta parte da premissa de que o Guarda Mirim Tech, como espaço integrador, pode articular a Guarda Mirim, a UEL, a NCS e a Eletro, promovendo inovação pedagógica e impacto social em Londrina.</p>
-
-<!-- Esclarecimento sobre a natureza do programa -->
-<p>Por se tratar de uma ação continuada e articulada que abrange formações modulares, laboratórios de co‑criação e ações de difusão ao longo de vários semestres, esta iniciativa se caracteriza como um <strong>Programa de Extensão</strong> da UEL. A Proex ressalta que ações permanentes podem ser cadastradas como programas, sem necessidade de vinculação a projetos.<sup id="fnref5"><a href="#fn5">[5]</a></sup></p>
-<p>Como articuladores do <strong>Centro de Recondicionamento de Computadores do Paraná (CRC‑PR)</strong>, a NCS e a Eletro atuarão de forma integrada para que o Guarda Mirim Tech também receba as formações oferecidas pelo CRC‑PR. Essa parceria amplia as competências técnicas e possibilita a certificação de educandos, educadores sociais e demais participantes por meio de cursos como <em>Informática Básica, Design Gráfico, Manutenção de Computadores, Reparo de Celulares, Pilotagem de Drones, Excel Avançado, Inteligência Artificial</em> e <em>IdosoTech</em>. Ao incorporar essas formações ao currículo, o programa fortalece a economia circular, a inclusão digital e a sustentabilidade, alinhando‑se aos princípios do CRC‑PR de reparar dispositivos descartados, promover profissionalização e destinar adequadamente o lixo eletrônico.</p>
-
-<h2>2. Objetivo geral</h2>
-<p>Desenvolver um <strong>programa de formação e atuação em cultura maker</strong> que qualifique os educadores sociais da Guarda Mirim e os licenciandos da UEL para planejar e executar projetos de fabricação digital e ciência cidadã com adolescentes (educandos), fortalecendo a inclusão digital, a sustentabilidade e a articulação comunitária em Londrina.</p>
-
-<h2>3. Objetivos específicos</h2>
+<header id="title-block-header">
+<h1 class="title">Programa de Extens  o - Guarda Mirim Tech</h1>
+</header>
+<h1 id="programa-de-extensão-guarda-mirim-tech">Programa de Extensão –
+Guarda Mirim Tech</h1>
+<h2 id="contexto-e-justificativa">1. Contexto e justificativa</h2>
+<p>A Guarda Mirim de Londrina procurou a Universidade Estadual de
+Londrina (UEL) e a Universidade Tecnológica Federal do Paraná (UTFPR)
+solicitando apoio para estruturar um processo de formação em
+cultura maker e inclusão digital. Em resposta a essa demanda, docentes
+de diferentes centros da UEL e da UTFPR, juntamente com a
+Nossa Comunidade Sustentável (NCS), a Associação Gestora de E‑letro e o
+Centro de Recondicionamento de Computadores do Paraná (CRC‑PR),
+construíram esta proposta para organizar e dinamizar o
+<strong>Guarda Mirim Tech</strong>. O programa, instalado na sede da
+Guarda Mirim no bairro Aeroporto, será executado em parceria pela
+<strong>GML</strong>, <strong>NCS</strong>, <strong>E‑letro</strong> e
+<strong>CRC‑PR</strong>, com suporte acadêmico de UEL e UTFPR e
+financiamento do Consulado do Japão. O espaço fomentará inclusão
+digital, cultura maker e formação técnica para educadores sociais,
+educandos e licenciandos.</p>
+<p>A literatura sobre educação maker ressalta que esse movimento, ao
+recuperar o aprender‑fazendo, conecta bases filosóficas e históricas à
+prática contemporânea e democratiza o aprendizado, desenvolvendo
+habilidades críticas. Contudo, também aponta desafios como a
+sustentabilidade financeira e a formação específica de
+docentes【627206755772754†L4-L15】. Esta proposta parte da premissa de
+que o Guarda Mirim Tech, como espaço integrador, pode articular a
+Guarda Mirim, a UEL, a UTFPR, a NCS, a E‑letro e o CRC‑PR, promovendo
+inovação pedagógica, economia circular e impacto social em Londrina. A
+parceria com o CRC‑PR possibilita oferecer cursos como
+<strong>Informática Básica</strong>, <strong>Design Gráfico</strong>,
+<strong>Manutenção de Computadores</strong>,
+<strong>Reparo de Celulares</strong>,
+<strong>Pilotagem de Drones</strong>, <strong>Excel Avançado</strong>,
+<strong>Inteligência Artificial</strong> e <strong>IdosoTech</strong>,
+ampliando as competências técnicas e garantindo certificação
+oficial【719798513844411†L1381-L1418】【719798513844411†L1455-L1495】.</p>
+<h2 id="objetivo-geral">2. Objetivo geral</h2>
+<p>Desenvolver um programa de formação e atuação em cultura maker que
+qualifique os educadores sociais da Guarda Mirim e os licenciandos da
+UEL/UTFPR para planejar e executar projetos de fabricação digital e
+ciência cidadã com adolescentes (educandos), fortalecendo a inclusão
+digital, a sustentabilidade e a articulação comunitária em Londrina.</p>
+<h2 id="objetivos-específicos">3. Objetivos específicos</h2>
 <ul>
-<li>Mapear necessidades formativas dos educadores sociais e identificar desafios comunitários a serem abordados através de projetos maker.</li>
-<li>Elaborar e ministrar módulos de formação interdisciplinares (eletrônica, programação, documentação textual, filosofia da educação, ensino de ciências e aspectos éticos e políticos da tecnologia) que unam teoria e prática.</li>
-<li>Implantar laboratórios de co‑criação no Guarda Mirim Tech para desenvolver protótipos e soluções que respondam a problemas reais (monitoramento ambiental, robótica educativa, produtos sustentáveis etc.).</li>
-<li>Produzir <strong>recursos educacionais abertos</strong> (manuais, vídeos, sequências didáticas) e manter repositório digital com documentação e relatos de experiência.</li>
-<li>Formar bolsistas de extensão (licenciandos dos cursos de Letras, Computação, Educação e Biologia) que atuem como monitores, fortalecendo a articulação ensino–pesquisa–extensão.</li>
-<li>Avaliar os impactos do programa na formação dos educadores e na participação dos educandos, divulgando resultados em eventos e periódicos científicos.</li>
+<li>Mapear necessidades formativas dos educadores sociais e identificar
+desafios comunitários a serem abordados através de projetos maker.</li>
+<li>Elaborar e ministrar módulos de formação interdisciplinares
+(eletrônica, programação, documentação textual, filosofia da educação,
+ensino de ciências e aspectos éticos e políticos da tecnologia) que unam
+teoria e prática.</li>
+<li>Implantar laboratórios de co‑criação no Guarda Mirim Tech para
+desenvolver protótipos e soluções que respondam a problemas reais
+(monitoramento ambiental, robótica educativa, produtos sustentáveis
+etc.).</li>
+<li>Produzir recursos educacionais abertos (manuais, vídeos, sequências
+didáticas) e manter repositório digital com documentação e relatos de
+experiência.</li>
+<li>Formar bolsistas de extensão (licenciandos) que atuem como
+monitores, fortalecendo a articulação ensino–pesquisa–extensão.</li>
+<li>Avaliar os impactos do programa na formação dos educadores e na
+participação dos educandos, divulgando resultados em eventos e
+periódicos científicos.</li>
 </ul>
-
-<h2>4. Fundamentação teórica e contribuições dos docentes</h2>
-<!-- Introdução aos princípios transversais da cultura maker -->
-<p>A cultura maker se sustenta em princípios de <strong>aprendizagem ativa</strong>, colaboração e uso criativo de tecnologias para a resolução de problemas. Esses valores são transversais a todas as contribuições docentes descritas a seguir e orientam a formação continuada necessária para consolidar espaços maker inclusivos e sustentáveis.</p>
-<h3>4.1 Comunicação e letramento digital</h3>
-<p>As competências de comunicação, multiletramento e sustentabilidade serão trabalhadas de forma transversal. O prof. <strong>Paulo Bassani</strong><sup id="fnref4"><a href="#fn4">[4]</a></sup>, cientista social especializado em sociologia ambiental e sustentabilidade, oferecerá reflexões socioambientais e estratégias de mobilização comunitária, integrando a dimensão social e ecológica às práticas de comunicação e multiletramento. A equipe estimulará a criação de relatos, vídeos e podcasts acessíveis que conectem tecnologia, território, sustentabilidade e economia circular, aproximando educadores e educandos de um entendimento amplo dos Objetivos de Desenvolvimento Sustentável e da reciclagem.</p>
-
-<h3>4.2 Tecnologias digitais, programação e economia circular</h3>
-<p>Esta dimensão reúne competências de computação, prototipagem, recondicionamento de equipamentos e sustentabilidade. O prof. <strong>Jacques Duílio Brancher</strong>, professor da área de computação, supervisionará estudantes de graduação que atuarão como bolsistas de extensão e monitores, apoiando o funcionamento cotidiano do programa no Guarda Mirim Tech e trazendo o vasto conhecimento digital essencial para as práticas maker. <strong>Eletro</strong> e <strong>NCS</strong> atuarão de forma integrada como articuladores do <strong>Centro de Recondicionamento de Computadores do Paraná (CRC‑PR)</strong>. Sob a gestão de <strong>Alex Gonçalves</strong>, a Eletro disponibilizará materiais reaproveitados e expertise em economia circular; a NCS coordenará pedagogicamente a incorporação dos cursos do CRC‑PR à formação. A inclusão de cursos como <em>Informática Básica, Design Gráfico, Manutenção de Computadores, Reparo de Celulares, Pilotagem de Drones, Excel Avançado, Inteligência Artificial</em> e <em>IdosoTech</em> ampliará as competências técnicas e possibilitará a certificação de educandos, educadores sociais e demais participantes. Essa integração também permitirá captar recursos adicionais ao auxiliar o CRC‑PR a cumprir suas metas de formação. A articulação dessas frentes permitirá que os participantes desenvolvam protótipos inovadores com consciência ambiental, economia circular e autonomia tecnológica.</p>
-
-<h3>4.3 Metodologias científicas e sustentabilidade socioambiental</h3>
-<p>A abordagem científica e a sustentabilidade serão tratadas de forma integrada. A profa. <strong>Mariana Aparecida Bologna Soares de Andrade</strong>, professora da UEL e Articuladora do NAPI <em>Paraná Faz Ciência</em> pela UEL , trará seu amplo conhecimento sobre metodologias e práticas maker e contará com uma equipe de protagonistas da ciência no Paraná para subsidiar a implementação cotidiana das práticas maker. Ela desenvolverá módulos sobre metodologia científica, natureza da ciência e educação ambiental crítica. O prof. <strong>Paulo Bassani</strong> atuará como coorientador, trazendo sua expertise em sociologia ambiental, desenvolvimento sustentável e movimentos sociais para discutir temas como justiça ambiental, gestão ambiental participativa e articulação entre ciência e sociedade. As atividades fomentarão projetos de ciência cidadã, monitoramento ambiental e soluções sustentáveis que envolvam a comunidade do bairro Aeroporto.</p>
-
-<h3>4.4 Dimensão sociopolítica, ética e cidadania</h3>
-<p>A dimensão sociopolítica, ética e humana perpassará todas as ações do programa. Os professores <strong>Paulo Bassani</strong> e <strong>Darcísio Natal Muraro</strong>, representantes das humanidades e do aspecto socioambiental, discutirão os fundamentos éticos e políticos inerentes à revolução maker. <strong>Darcísio</strong> abordará princípios de pedagogia crítica, ética digital e direitos humanos, promovendo rodas de conversa e reflexões sobre poder, tecnologia e cidadania inspiradas em Paulo Freire. <strong>Paulo Bassani</strong> complementará com análises de sociologia ambiental e rural, gestão ambiental e movimentos sociais, ressaltando o papel da participação social na construção de comunidades sustentáveis. Essa integração garantirá que os projetos maker não apenas produzam artefatos, mas também promovam empoderamento, consciência crítica, justiça socioambiental e compromisso com os ODS.</p>
-
-<!-- Nova subseção explicitando a contribuição da engenharia elétrica, sensores e robótica -->
-<h3>4.5 Instrumentação eletrônica, sensores e robótica educacional</h3>
-<p>Para ampliar as potencialidades do programa e incorporar competências de engenharia, foi incluída a professora Maria Bernadete de Morais França[6], do Departamento de Engenharia Elétrica da UEL. Ela é engenheira eletricista com mestrado pela Universidade Federal da Paraíba e doutorado pela Unicamp, e docente do departamento desde 2003. Sua atuação em pesquisa e extensão envolve microcontroladores, sensores agrícolas, instrumentação eletrônica, linguagens de descrição de hardware, robótica educacional, aprendizado de máquina e redes neurais, tendo participado da fundação do evento ROBOLON e  de iniciativas que incentivam meninas nas áreas de ciência e tecnologia. No contexto deste programa, juntamente com demais colegas do seu departamento e centro de estudos, Maria Bernadete oferecerá módulos sobre fundamentos de eletrônica, sensores e internet das coisas (IoT) aplicados a projetos maker e agricultura urbana; supervisionará a concepção de protótipos envolvendo robótica e automação; e apoiará a integração de licenciandos das engenharias aos módulos, estreitando a colaboração entre os Centros de Tecnologia e Urbanismo (CTU), Ciências Exatas (CCE), Educação, Comunicação e Artes (CECA) e Ciências Biológicas (CCB). Sua expertise possibilita desenvolver soluções inovadoras que combinam sustentabilidade, agricultura inteligente e robótica educacional, contribuindo para a formação dos educadores sociais e educandos.</p>
-
-<h2>5. Metodologia</h2>
-<p>A metodologia foi organizada em quatro fases sequenciais e interdependentes, visando criar uma estrutura robusta que combine <strong>diagnóstico, formação, co‑criação e difusão</strong>. Cada fase propõe ações detalhadas, resultados esperados e instrumentos de avaliação, incorporando princípios de design thinking como <em>brincar, empatia, mentalidade empreendedora e perseverança</em><sup id="fnref2"><a href="#fn2">[2]</a></sup>. A seguir, descrevem‑se as fases com maior aprofundamento.</p>
-
-<h3>5.1 Fase I – Diagnóstico e planejamento</h3>
-<p>Nesta fase inicial são realizadas ações de levantamento e planejamento colaborativo para construir uma base sólida para as etapas seguintes. O objetivo é <strong>conhecer os participantes, identificar oportunidades e organizar a governança</strong> do programa:</p>
-<ul>
-  <li><strong>Levantamento de perfil e diagnóstico inicial:</strong> aplicação de questionários e testes de letramento digital para avaliar níveis de alfabetização tecnológica, bem como entrevistas semiestruturadas e observação participante para mapear interesses, expectativas e repertório dos educadores e educandos. Será utilizado um instrumento inspirado em iniciativas de avaliação de makerspaces, contemplando uso de tecnologias, criatividade e trabalho em equipe. Os resultados orientarão a customização dos módulos formativos.</li>
-  <li><strong>Mapeamento de ativos e desafios:</strong> elaboração de um inventário de recursos (equipamentos, materiais, experiências prévias, parcerias) da Guarda Mirim e da comunidade, incluindo “ativos invisíveis” como saberes de artesãos e lideranças locais. Será realizada análise socioambiental do bairro Aeroporto para identificar desafios prioritários (descarte de lixo eletrônico, mobilidade, segurança alimentar etc.) passíveis de serem abordados por projetos maker.</li>
-  <li><strong>Construção participativa de indicadores e instrumentos de avaliação:</strong> com base em críticas frequentes à ausência de avaliações em programas de makerspaces, a equipe construirá, junto aos participantes, um conjunto de indicadores quantitativos e qualitativos (participação, satisfação, diversidade de gênero e raça, número de protótipos, reutilização de materiais, impacto comunitário). Serão definidos instrumentos de coleta (rubricas, fichas de observação, diários reflexivos) e estratégias de registro contínuo de processos<sup id="fnref3"><a href="#fn3">[3]</a></sup>.</li>
-  <li><strong>Planejamento colaborativo detalhado:</strong> elaboração do cronograma macro e micro, divisão de responsabilidades e pactuação de compromissos. Será constituído um grupo gestor com representantes da Guarda Mirim, NCS, professores da UEL, Eletro e educandos para acompanhar o programa, reunir‑se mensalmente e deliberar sobre ajustes de rota. O planejamento incluirá matriz de risco, plano de comunicação, estratégia de inclusão (ex.: tradução em Libras) e pré‑definição de atividades de difusão.</li>
-  <li><strong>Produtos da fase:</strong> relatório diagnóstico, mapa de ativos e desafios do bairro, matriz de indicadores, plano de trabalho e portfólio inicial de participantes.</li>
-</ul>
-
-<h3>5.2 Fase II – Formação modular (20 horas por módulo)</h3>
-<p>A formação será estruturada em <strong>módulos integrados</strong> de 20&nbsp;horas, abertos aos educadores sociais, licenciandos dos cursos de Letras, Computação, Educação e Biologia e, posteriormente, aos educandos. Cada módulo combinará aulas teóricas, práticas mão‑na‑massa e atividades assíncronas, e contará com objetivos claros e critérios de avaliação formativa. Para dar maior robustez à formação, as avaliações considerarão não apenas os produtos finais, mas também a <strong>experiência de aprendizagem, colaboração e perseverança dos participantes</strong><sup id="fnref2b"><a href="#fn2">[2]</a></sup>. Além disso, será incluído um módulo específico de <strong>empreendedorismo social</strong>, que incentivará os participantes a pesquisar problemas na comunidade, propor soluções inovadoras e transformar essas soluções em negócios de impacto. Os módulos propostos são apresentados na tabela a seguir:</p>
-
+<h2 id="fundamentação-teórica-e-contribuições-dos-docentes">4.
+Fundamentação teórica e contribuições dos docentes</h2>
+<p>A cultura maker se sustenta em princípios de aprendizagem ativa,
+colaboração e uso criativo de tecnologias para a resolução de problemas.
+Esses valores orientam todas as contribuições docentes e a formação
+continuada necessária para consolidar espaços maker inclusivos e
+sustentáveis.</p>
+<h3 id="comunicação-e-letramento-digital">4.1 Comunicação e letramento
+digital</h3>
+<p>As competências de comunicação, multiletramento e sustentabilidade
+serão trabalhadas de forma transversal. O professor
+<strong>Paulo Bassani</strong>, cientista social especializado em
+sociologia ambiental e sustentabilidade, oferecerá reflexões
+socioambientais e estratégias de mobilização comunitária. A equipe
+estimulará a criação de relatos, vídeos e podcasts que conectem
+tecnologia, território, sustentabilidade e economia circular,
+aproximando educadores e educandos de um entendimento amplo dos
+Objetivos de Desenvolvimento Sustentável e da reciclagem.</p>
+<h3 id="tecnologias-digitais-programação-e-economia-circular">4.2
+Tecnologias digitais, programação e economia circular</h3>
+<p>Esta dimensão reúne competências de computação, prototipagem,
+recondicionamento de equipamentos e sustentabilidade. O professor
+<strong>Jacques Duílio Brancher</strong>, da área de computação,
+supervisionará estudantes de graduação que atuarão como bolsistas e
+monitores, apoiando o funcionamento cotidiano do programa e trazendo
+conhecimento digital essencial para as práticas maker. A
+<strong>ONG E‑letro</strong> e a <strong>NCS</strong> atuarão de forma
+integrada como articuladoras do <strong>CRC‑PR</strong>,
+disponibilizando materiais reaproveitados e expertise em economia
+circular. A partir da parceria com o CRC‑PR, serão incorporados os
+cursos de informática básica, design gráfico, manutenção de
+computadores, reparo de celulares, pilotagem de drones, Excel avançado,
+inteligência artificial e IdosoTech【627206755772754†L25-L35】. Esses
+cursos complementam as práticas maker ao abordar montagem e reparo de
+equipamentos, criação de conteúdos visuais, alfabetização digital,
+manipulação avançada de dados e fundamentos de inteligência
+artificial【719798513844411†L1381-L1418】【719798513844411†L1455-L1495】.
+A GML, como instituição anfitriã e executora, mobilizará educadores
+sociais e participará diretamente da oferta desses cursos, articulando o
+espaço físico e o acesso às comunidades.</p>
+<h3 id="metodologias-científicas-e-sustentabilidade-socioambiental">4.3
+Metodologias científicas e sustentabilidade socioambiental</h3>
+<p>A professora
+<strong>Mariana Aparecida Bologna Soares de Andrade</strong>,
+articuladora do NAPI Paraná Faz Ciência, e docentes da UTFPR
+desenvolverão módulos sobre metodologia científica, natureza da ciência
+e educação ambiental crítica. Eles fomentarão projetos de ciência
+cidadã, monitoramento ambiental e soluções sustentáveis que envolvam a
+comunidade do bairro Aeroporto. O professor
+<strong>Paulo Bassani</strong> atuará como coorientador, discutindo
+sociologia ambiental, desenvolvimento sustentável e movimentos sociais,
+com foco em justiça ambiental e gestão participativa.</p>
+<h3 id="dimensão-sociopolítica-ética-e-cidadania">4.4 Dimensão
+sociopolítica, ética e cidadania</h3>
+<p>Os professores <strong>Paulo Bassani</strong> e
+<strong>Darcísio Natal Muraro</strong>, representantes das humanidades e
+do aspecto socioambiental, discutirão os fundamentos éticos e políticos
+da revolução maker. Darcísio abordará princípios de pedagogia crítica,
+ética digital e direitos humanos, promovendo rodas de conversa e
+reflexões sobre poder, tecnologia e cidadania inspiradas em
+Paulo Freire. Essa integração garantirá que os projetos maker não apenas
+produzam artefatos, mas também promovam empoderamento, consciência
+crítica e compromisso com os ODS.</p>
+<h3 id="instrumentação-eletrônica-sensores-e-robótica-educacional">4.5
+Instrumentação eletrônica, sensores e robótica educacional</h3>
+<p>Para ampliar as potencialidades do programa e incorporar competências
+de engenharia, a professora
+<strong>Maria Bernadete de Morais França</strong> (UEL) e docentes da
+UTFPR oferecerão módulos sobre fundamentos de eletrônica, sensores e
+internet das coisas aplicados a projetos maker e agricultura urbana;
+supervisionarão a concepção de protótipos envolvendo robótica e
+automação; e apoiarão a integração de licenciandos das engenharias aos
+módulos. Sua expertise possibilita desenvolver soluções inovadoras que
+combinam sustentabilidade, agricultura inteligente e robótica
+educacional, contribuindo para a formação dos educadores sociais e
+educandos【627206755772754†L135-L154】.</p>
+<h2 id="metodologia">5. Metodologia</h2>
+<h3 id="fase-i-diagnóstico-e-planejamento">5.1 Fase I – Diagnóstico e
+planejamento</h3>
+<p>Esta fase realiza levantamento de perfil, diagnóstico inicial e
+mapeamento de ativos e desafios, por meio de questionários, entrevistas
+e análise socioambiental. O objetivo é conhecer os participantes,
+identificar oportunidades e organizar a governança do programa. Em vez
+de uma equipe externa, o <strong>grupo gestor</strong> será composto por
+representantes da Guarda Mirim (educadores e coordenação), da NCS, da
+E‑letro, do CRC‑PR, de docentes da UEL e UTFPR e de educandos,
+reforçando a co‑execução e o protagonismo da GML na tomada de decisões.
+Serão construídos indicadores participativos, instrumentos de avaliação
+e um plano de trabalho colaborativo que inclui matriz de risco, plano de
+comunicação e estratégias de inclusão.</p>
+<h3 id="fase-ii-formação-modular-20-horas-por-módulo">5.2 Fase II –
+Formação modular (20 horas por módulo)</h3>
+<p>A formação será estruturada em módulos de 20 horas, abertos aos
+educadores sociais, licenciandos dos cursos de Letras, Computação,
+Educação e Biologia e, posteriormente, aos educandos. Cada módulo
+combinará aulas teóricas, práticas mão‑na‑massa e atividades
+assíncronas, e contará com objetivos claros e critérios de avaliação
+formativa【627206755772754†L205-L213】. A GML, como co‑executora,
+participará da elaboração e ministração dos módulos, mobilizando
+educadores sociais como monitores e facilitadores.</p>
+<p>Os módulos propostos são:</p>
 <table>
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 30%" />
+<col style="width: 46%" />
+</colgroup>
 <thead>
-<tr>
+<tr class="header">
 <th>Módulo</th>
 <th>Conteúdo</th>
 <th>Responsáveis</th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td><strong>Cultura maker e inclusão digital</strong></td>
-<td>Histórico e fundamentos do movimento maker; relação com aprendizagem por projetos; normas de segurança e ética; uso de ferramentas como impressoras 3D, cortadora a laser, Arduino e sensores; estudo de casos brasileiros e internacionais.</td>
-<td>NCS, Jacques Brancher e equipe da Eletro</td>
+<td>Histórico e fundamentos do movimento maker; aprendizagem por
+projetos; normas de segurança e ética; uso de ferramentas como
+impressoras 3D, cortadora a laser, Arduino e sensores; estudo de casos
+brasileiros e internacionais</td>
+<td>NCS, Jacques Brancher e equipe da E‑letro, com suporte da GML</td>
 </tr>
-<tr>
+<tr class="even">
 <td><strong>Eletrônica e programação física</strong></td>
-<td>Circuitos elétricos básicos; uso de microcontroladores (Arduino, micro:bit, ESP32); programação de sensores e atuadores; automação sustentável com energias renováveis; desmontagem e reaproveitamento de eletrônicos; oficina de soldagem e de fabricação de placas.</td>
-<td>Maria Bernadete de Morais França, Eletro, bolsistas de Computação</td>
+<td>Circuitos elétricos básicos; uso de microcontroladores (Arduino,
+micro:bit, ESP32); programação de sensores e atuadores; automação
+sustentável com energias renováveis; desmontagem e reaproveitamento de
+eletrônicos; oficina de soldagem e fabricação de placas</td>
+<td>Maria Bernadete de Morais França, docentes da UTFPR, E‑letro e
+bolsistas de Computação</td>
 </tr>
-<tr>
+<tr class="odd">
 <td><strong>Documentação e comunicação</strong></td>
-<td>Linguagens verbais e multimodais; elaboração de relatórios, vídeos, tutoriais e podcasts; narrativa de projetos; letramento digital e divulgação científica; produção de conteúdos acessíveis (Libras, audiodescrição); técnicas de storytelling e comunicação institucional.</td>
-<td>Equipe de comunicação (Paulo Bassani e NCS)</td>
+<td>Linguagens verbais e multimodais; elaboração de relatórios, vídeos,
+tutoriais e podcasts; narrativa de projetos; letramento digital e
+divulgação científica; produção de conteúdos acessíveis (Libras,
+audiodescrição); técnicas de storytelling e comunicação
+institucional</td>
+<td>Equipe de comunicação (Paulo Bassani, NCS e GML)</td>
 </tr>
-<tr>
+<tr class="even">
 <td><strong>Filosofia da educação e ética digital</strong></td>
-<td>Fundamentos da pedagogia crítica e da educação popular; direitos digitais, privacidade e ética na tecnologia; reflexão sobre gênero, raça e classe nos espaços maker; debates sobre acessibilidade e inclusão; análise de casos de uso responsável e de impactos sociais das tecnologias.</td>
+<td>Fundamentos da pedagogia crítica e da educação popular; direitos
+digitais, privacidade e ética na tecnologia; reflexão sobre gênero, raça
+e classe nos espaços maker; debates sobre acessibilidade e inclusão;
+análise de casos de uso responsável e de impactos sociais das
+tecnologias</td>
 <td>Darcísio Natal Muraro e Paulo Bassani</td>
 </tr>
-<tr>
-<td><strong>Metodologias de ensino de ciências e sustentabilidade</strong></td>
-<td>Natureza da ciência; métodos de investigação científica; educação ambiental crítica; ciência cidadã; integração de conteúdos de biologia e sustentabilidade aos projetos; estudo de problemas socioambientais locais.</td>
-<td>Mariana A. B. S. de Andrade e Paulo Bassani</td>
+<tr class="odd">
+<td><strong>Metodologias de ensino de ciências e
+sustentabilidade</strong></td>
+<td>Natureza da ciência; métodos de investigação científica; educação
+ambiental crítica; ciência cidadã; integração de conteúdos de biologia e
+sustentabilidade aos projetos; estudo de problemas socioambientais
+locais</td>
+<td>Mariana A. B. S. de Andrade, docentes da UTFPR e Paulo Bassani</td>
 </tr>
-<tr>
+<tr class="even">
 <td><strong>Gestão de projetos comunitários</strong></td>
-<td>Planejamento e gestão ágil (Scrum, Kanban); trabalho em equipe e liderança; parceria com a comunidade; captação de recursos; design de experiências; técnicas de pitch e apresentação de projetos; princípios de empreendedorismo social.</td>
-<td>NCS, Eletro, docentes (incluindo Paulo Bassani)</td>
+<td>Planejamento e gestão ágil (Scrum, Kanban); trabalho em equipe e
+liderança; parceria com a comunidade; captação de recursos; design de
+experiências; técnicas de pitch e apresentação de projetos; princípios
+de empreendedorismo social</td>
+<td>NCS, E‑letro, professores da UEL/UTFPR e GML</td>
 </tr>
- <tr>
-   <td><strong>Empreendedorismo social e inovação</strong></td>
-   <td>Pesquisa participativa na comunidade para identificar problemas e oportunidades; design de modelos de negócios sociais (Canvas e Lean&nbsp;Startup); elaboração de planos de negócios de impacto; estudo de casos de cooperativas e startups comunitárias; preparação para ideathons/hackathons e desenvolvimento de <em>pitches</em>.</td>
-   <td>NCS, docentes da UEL especializados em administração e empreendedorismo, com apoio de mentores externos</td>
- </tr>
-  <tr>
-    <td><strong>Cursos complementares do CRC‑PR</strong></td>
-    <td>Integração das formações do Centro de Recondicionamento de Computadores do Paraná (informática básica, design gráfico, manutenção de computadores, reparo de celulares, pilotagem de drones, Excel avançado, inteligência artificial e IdosoTech) para ampliação das competências técnicas. Esses cursos oferecem certificação oficial e complementam as práticas maker, abordando montagem e reparo de equipamentos, criação de conteúdos visuais, alfabetização digital, manipulação avançada de dados e fundamentos de inteligência artificial.</td>
-    <td>Eletro/NCS (articuladores do CRC‑PR), em parceria com docentes da UEL e profissionais do CRC</td>
-  </tr>
+<tr class="odd">
+<td><strong>Empreendedorismo social e inovação</strong></td>
+<td>Pesquisa participativa na comunidade para identificar problemas e
+oportunidades; design de modelos de negócios sociais (Canvas e
+Lean Startup); elaboração de planos de negócios de impacto; estudo de
+casos de cooperativas e startups comunitárias; preparação para
+ideathons/hackathons e desenvolvimento de pitches</td>
+<td>NCS, docentes da UEL/UTFPR especializados em administração e
+empreendedorismo, com apoio de mentores externos</td>
+</tr>
+<tr class="even">
+<td><strong>Cursos complementares do CRC‑PR</strong></td>
+<td>Integração das formações do CRC‑PR:
+<strong>Informática Básica</strong>, <strong>Design Gráfico</strong>,
+<strong>Manutenção de Computadores</strong>, <strong>Reparo
+de Celulares</strong>, <strong>Pilotagem de Drones</strong>,
+<strong>Excel Avançado</strong>, <strong>Inteligência
+Artificial</strong> e <strong>IdosoTech</strong>. Esses cursos oferecem
+certificação oficial e complementam as práticas maker ao abordar
+montagem e reparo de equipamentos, criação de conteúdos visuais,
+alfabetização digital, manipulação avançada de dados, fundamentos de IA
+e inclusão digital para
+idosos【719798513844411†L1381-L1418】【719798513844411†L1608-L1647】</td>
+<td>E‑letro/NCS (articuladores do CRC‑PR) em parceria com docentes da
+UEL/UTFPR, profissionais do CRC e educadores sociais da GML</td>
+</tr>
 </tbody>
 </table>
-
-<p>Os módulos serão ofertados em formato híbrido, com encontros presenciais semanais e materiais on‑line (plataforma virtual com leituras, vídeos e fóruns). Para fortalecer a aprendizagem, serão propostos <strong>desafios práticos</strong> e <em>microprojetos</em> individuais ou em duplas, alinhados às demandas do diagnóstico (por exemplo, criação de sensor de qualidade do ar, dispositivo de irrigação automatizada, podcast sobre saúde mental). Cada participante manterá um <strong>diário de bordo</strong> digital para registrar descobertas, dificuldades e insights. Ao final de cada módulo, serão realizadas apresentações públicas com rubricas de avaliação co‑construídas, incluindo critérios de criatividade, resolução de problemas, trabalho em equipe e impacto social.</p>
-
-<h3>5.3 Fase III – Laboratórios de co‑criação</h3>
-<p>Com base na formação recebida, os participantes formarão <strong>equipes interdisciplinares</strong> para desenvolver projetos que respondam a desafios reais da comunidade. O ciclo de criação seguirá etapas inspiradas no <strong>design thinking</strong> e modelos como Launch Cycle e uTEC Maker, valorizando o <strong>brincar, a empatia, a experimentação e a mentalidade empreendedora</strong><sup id="fnref2c"><a href="#fn2">[2]</a></sup>:</p>
-<ul>
-  <li><strong>Empatia e definição do desafio:</strong> as equipes investigarão problemas locais por meio de pesquisa participativa (entrevistas, questionários, caminhadas exploratórias e observações), buscando compreender as necessidades e sonhos dos moradores e identificar oportunidades de negócio de impacto. Serão formulados enunciados de desafio claros, contendo público, necessidade, propósito e potencial de sustentabilidade social e econômica.</li>
-  <li><strong>Ideação:</strong> sessões de brainstorming, mapeamento de ideias com uso de métodos divergentes e convergentes (como SCAMPER e 6‑3‑5) para gerar múltiplas soluções. As equipes serão incentivadas a desenhar, construir maquetes simples e valorizar a criatividade sem julgamentos.</li>
-  <li><strong>Prototipagem rápida:</strong> construção de protótipos de baixa fidelidade com materiais simples (papel, papelão, LEGO, sucata) e uso de softwares de modelagem (TinkerCad) para testar conceitos e funcionalidades. A cultura do erro será destacada como parte do processo de aprendizagem, favorecendo a perseverança<sup id="fnref2d"><a href="#fn2">[2]</a></sup>.</li>
-  <li><strong>Construção e iteração:</strong> desenvolvimento do protótipo final utilizando ferramentas do Guarda Mirim Tech (impressoras 3D, CNC, soldagem, Arduino, ferramentas manuais). Cada ciclo incluirá testes com usuários reais (educandos, familiares, comunidade), coleta de feedback e refinamento iterativo. Serão discutidos aspectos de viabilidade técnica, sustentabilidade, custos e potenciais modelos de negócios.</li>
-  <li><strong>Documentação e comunicação:</strong> registro detalhado do processo (textos, fotos, vídeos, esquemas, código‑fonte), elaboração de manuais de uso e materiais de divulgação (postagens, vídeos, podcast) em linguagem acessível. O respeito à ética, privacidade e direitos autorais será assegurado.</li>
-  <li><strong>Apresentação, feedback e mentoria:</strong> organização de uma <em>mostra maker</em> na Guarda Mirim e participação em eventos externos. As equipes apresentarão seus projetos para um público diverso (comunidade, professores, especialistas), receberão críticas construtivas e orientações de mentores (professores da UEL, profissionais convidados, alumni). O feedback será registrado e incorporado nos planos de melhoria.</li>
-
-  <li><strong>Ideathon/hackathon:</strong> ao final do ciclo, será promovido um <em>ideathon/hackathon</em> para acelerar a geração de soluções empreendedoras. Durante este evento intensivo, as equipes irão refinar suas ideias, construir protótipos, elaborar planos de negócios sociais e apresentar <em>pitches</em> a uma banca de especialistas e mentores.</li>
-</ul>
-<p>Cada equipe terá um professor orientador e um monitor bolsista. Serão promovidos <strong>encontros semanais</strong> para acompanhamento técnico e pedagógico, além do uso de ferramentas digitais colaborativas (Trello para gestão de tarefas, GitHub/Lab para código, Google Workspace para documentação). As atividades valorizarão a <strong>interdisciplinaridade</strong> e a <strong>articulação comunitária</strong>, convidando parceiros externos (ONGs, empresas, laboratórios públicos) para contribuir com mentorias e patrocínios.</p>
-
-<h3>5.4 Fase IV – Difusão, sustentabilidade e expansão</h3>
-<p>Finalizado o ciclo de co‑criação, serão implementadas estratégias para garantir a continuidade e o <strong>alcance do programa</strong>, transformando o Guarda Mirim Tech em um <em>hub</em> permanente de inovação social:</p>
-<ul>
-  <li><strong>Repositório aberto e kits replicáveis:</strong> os materiais produzidos (guias, códigos, desenhos, planos de aula) serão disponibilizados em plataforma digital administrada pela NCS, sob licenças Creative Commons. Serão elaborados <em>kits maker</em> com listas de materiais, instruções passo a passo e vídeos, facilitando a replicação em escolas e centros comunitários.</li>
-  <li><strong>Eventos, mostras e ideathons:</strong> realização de feiras maker semestrais, <em>ideathons/hackathons</em> e oficinas abertas ao público, com exposição dos protótipos, apresentações de planos de negócios sociais e rodas de debate sobre tecnologia, inclusão e sustentabilidade. Esses eventos servirão para sensibilizar novos parceiros, atrair investidores e ampliar a visibilidade do Guarda Mirim Tech e do programa.</li>
-  <li><strong>Rede de multiplicadores e formação continuada:</strong> formação de educadores como formadores de outros educadores (“train the trainer”), garantindo que novos participantes sejam capacitados regularmente. A rede de multiplicadores atuará em escolas públicas, ONGs e empresas, fortalecendo a cultura maker em Londrina.</li>
-  <li><strong>Programa de mentoria comunitária:</strong> engajamento de universitários e profissionais voluntários das áreas de tecnologia, educação, design e sustentabilidade para apoiar projetos futuros e auxiliar na manutenção do laboratório. Será criado um banco de mentores e uma agenda de plantões.</li>
-  <li><strong>Prospecção de financiamento e parcerias:</strong> elaboração de propostas para editais de extensão, inovação e desenvolvimento social; campanhas de financiamento coletivo; parcerias com empresas (responsabilidade social corporativa) e órgãos públicos para aquisição e manutenção de equipamentos. Serão consideradas oportunidades de incubação de projetos e de geração de renda para os educandos.</li>
-  <li><strong>Integração com redes maker e polos de inovação:</strong> estabelecimento de parcerias com outros espaços maker regionais e nacionais, participação em feiras e conferências, e adesão a redes como Fab Lab Brasil e movimento Arduino Day. A troca de saberes permitirá atualizar metodologias e ampliar o repertório do Guarda Mirim Tech.</li>
-  <li><strong>Acompanhamento de egressos e avaliação de longo prazo:</strong> manutenção do contato com educandos e educadores formados, por meio de plataformas on‑line e encontros periódicos, para avaliar o impacto a médio prazo nas trajetórias educacionais e profissionais. Serão aplicados questionários de acompanhamento e estudos de caso sobre desdobramentos dos projetos.</li>
-  <li><strong>Produtos e relatórios:</strong> publicação de boletins, artigos acadêmicos, manuais de boas práticas e relatos de experiência; produção de podcasts e vídeos institucionais; elaboração de relatórios anuais de impacto para prestação de contas aos financiadores e à comunidade.</li>
-</ul>
-
-<h2>6. Público‑alvo e participantes</h2>
-<ul>
-<li><strong>Educadores sociais da Guarda Mirim</strong> – público prioritário; receberão formação e atuarão como multiplicadores das práticas maker.</li>
-<li><strong>Educandos (adolescentes)</strong> – participarão das oficinas e laboratórios, desenvolvendo competências técnicas, científicas e sociais.</li>
-<li><strong>Licenciandos da UEL</strong> – estudantes dos cursos de Letras, Computação, Educação, Biologia e áreas afins atuarão como bolsistas/monitores, articulando teoria e prática e desenvolvendo habilidades de extensão.</li>
-<li><strong>Docentes da UEL</strong> – Jacques Duílio Brancher, Darcísio Natal Muraro, Mariana Aparecida B. S. de Andrade, Paulo Bassani e Maria Bernadete de Morais França (Engenharia Elétrica), além de docentes vinculados à NCS/Eletro, orientarão as atividades e desenvolverão pesquisa aplicada.</li>
-<li><strong>Nossa Comunidade Sustentável e Eletro</strong> – instituições parceiras que atuarão integradas como articuladoras do Centro de Recondicionamento de Computadores do Paraná (CRC‑PR), assumindo a coordenação geral, a articulação comunitária, o apoio técnico e a divulgação institucional, além de mediar a oferta dos cursos do CRC‑PR no Guarda Mirim Tech.</li>
-</ul>
-
-<h2>7. Cronograma proposto (24 meses)</h2>
+<p>Os módulos serão ofertados em formato híbrido, com encontros
+presenciais semanais e materiais on‑line. Para fortalecer a
+aprendizagem, serão propostos desafios práticos e microprojetos
+alinhados às demandas do diagnóstico (por exemplo, criação de sensor de
+qualidade do ar, dispositivo de irrigação automatizada, podcast sobre
+saúde mental). Cada participante manterá um diário de bordo digital para
+registrar descobertas, dificuldades e insights. Ao final de cada módulo,
+serão realizadas apresentações públicas com rubricas de avaliação
+co‑construídas.</p>
+<h3 id="fase-iii-laboratórios-de-cocriação">5.3 Fase III – Laboratórios
+de co‑criação</h3>
+<p>Com base na formação recebida, os participantes formarão equipes
+interdisciplinares para desenvolver projetos que respondam a desafios
+reais da comunidade. O ciclo de criação seguirá etapas de design
+thinking e modelos como Launch Cycle e uTEC Maker, valorizando o
+brincar, a empatia, a experimentação e a mentalidade
+empreendedora【627206755772754†L279-L299】. Cada equipe contará com um
+professor orientador, um monitor bolsista e educadores sociais da GML,
+garantindo acompanhamento técnico e pedagógico. Serão promovidos
+encontros semanais, mentorias e participação de parceiros externos. O
+programa enfatizará a interdisciplinaridade e a articulação comunitária,
+convidando ONGs, empresas e laboratórios públicos para contribuir.</p>
+<h3 id="fase-iv-difusão-sustentabilidade-e-expansão">5.4 Fase IV –
+Difusão, sustentabilidade e expansão</h3>
+<p>Após o ciclo de co‑criação, serão implementadas estratégias para
+garantir a continuidade e o alcance do programa, transformando o
+Guarda Mirim Tech em um hub permanente de inovação social. As principais
+ações incluem: (i) criação de um repositório aberto com guias, códigos e
+kits replicáveis; (ii) realização de feiras maker, ideathons e oficinas
+para difusão dos projetos; (iii) programa de mentoria comunitária e
+prospecção de novos financiamentos; e (iv) integração com redes de
+makerspaces regionais e acompanhamento de egressos. A GML atuará como
+anfitriã e co‑gestora das atividades, fortalecendo sua identidade
+institucional e ampliando parcerias.</p>
+<h2 id="cronograma-proposto-24-meses">6. Cronograma proposto
+(24 meses)</h2>
 <table>
-<thead><tr><th>Mês</th><th>Atividades principais</th></tr></thead>
+<colgroup>
+<col style="width: 22%" />
+<col style="width: 77%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Meses</th>
+<th>Atividades principais</th>
+</tr>
+</thead>
 <tbody>
-<tr><td>1–3</td><td><strong>Fase I:</strong> diagnóstico (entrevistas, questionários, reuniões com a comunidade), elaboração do mapa de ativos e desafios e planejamento detalhado; aquisição de equipamentos.</td></tr>
-<tr><td>4–9</td><td><strong>Fase II:</strong> realização dos módulos de formação (um ou dois módulos por mês), incluindo o novo módulo de empreendedorismo social; pesquisa participativa na comunidade para identificar problemas e oportunidades de negócio; seleção e capacitação de bolsistas e membros da comunidade (incluindo guardas mirins); instalação e organização do laboratório; desenvolvimento dos microprojetos e avaliações formativas.</td></tr>
-<tr><td>10–15</td><td><strong>Fase III:</strong> laboratórios de co‑criação – planejamento e execução dos projetos interdisciplinares e de negócios sociais; acompanhamento e mentorias semanais; uso das ferramentas e do espaço maker; realização de ideathons/hackathons para cocriar soluções inovadoras; pesquisa de modelos de negócio e prototipagem; registro detalhado do processo.</td></tr>
-<tr><td>16–20</td><td><strong>Fase IV (difusão inicial):</strong> mostra maker, feiras e eventos públicos; ideathons/hackathons para difusão e aceleração dos projetos; publicização dos resultados; programa de mentoria comunitária; consolidação do repositório e apoio aos replicadores.</td></tr>
-<tr><td>21–24</td><td><strong>Consolidação e expansão:</strong> produção de relatórios técnicos e científicos; publicação de materiais no repositório; formação continuada dos multiplicadores; prospecção de novos financiamentos; replicação dos kits em outras escolas e centros comunitários; planejamento do ciclo seguinte.</td></tr>
+<tr class="odd">
+<td><strong>1–3</strong></td>
+<td>Fase I: diagnóstico (entrevistas, questionários, reuniões com a
+comunidade), elaboração do mapa de ativos e desafios e planejamento
+detalhado; aquisição de equipamentos.</td>
+</tr>
+<tr class="even">
+<td><strong>4–9</strong></td>
+<td>Fase II: realização dos módulos de formação (um ou dois módulos por
+mês), incluindo empreendedorismo social e cursos do CRC‑PR; pesquisa
+participativa na comunidade; seleção e capacitação de bolsistas,
+educadores sociais e membros da comunidade; instalação e organização do
+laboratório; desenvolvimento de microprojetos e avaliações
+formativas.</td>
+</tr>
+<tr class="odd">
+<td><strong>10–15</strong></td>
+<td>Fase III: laboratórios de co‑criação – planejamento e execução de
+projetos interdisciplinares e de negócios sociais; mentorias semanais;
+uso das ferramentas e do espaço maker; realização de
+ideathons/hackathons; pesquisa de modelos de negócio e prototipagem;
+registro detalhado dos processos.</td>
+</tr>
+<tr class="even">
+<td><strong>16–20</strong></td>
+<td>Fase IV (difusão inicial): mostra maker, feiras e eventos públicos;
+ideathons/hackathons para difusão e aceleração dos projetos;
+publicização dos resultados; programa de mentoria comunitária;
+consolidação do repositório e apoio aos replicadores.</td>
+</tr>
+<tr class="odd">
+<td><strong>21–24</strong></td>
+<td>Consolidação e expansão: produção de relatórios técnicos e
+científicos; publicação de materiais no repositório; formação continuada
+dos multiplicadores; prospecção de novos financiamentos; replicação dos
+kits em outras escolas e centros comunitários; planejamento do ciclo
+seguinte.</td>
+</tr>
 </tbody>
 </table>
-
-<h2>8. Resultados esperados</h2>
+<h2 id="resultados-esperados">7. Resultados esperados</h2>
 <ul>
-<li><strong>Formação de todos os educadores sociais do quadro da Guarda Mirim (sede) e, na medida do possível, de outras unidades da Guarda</strong> em cultura maker, letramento digital e metodologia científica.</li>
-<li><strong>Engajamento de 60 educandos</strong> em projetos interdisciplinares que desenvolvam criatividade, pensamento crítico e competências socioemocionais.</li>
-<li><strong>Produção de um repositório de materiais abertos</strong>, incluindo apostilas, kits de projetos, relatos de experiência e vídeos didáticos.</li>
-<li><strong>Desenvolvimento de 4 projetos interdisciplinares</strong>, apresentados em mostra pública e com potencial de replicação.</li>
-<li><strong>Publicação de artigos científicos e relatos</strong> em eventos de extensão e educação, fortalecendo a visibilidade do Guarda Mirim Tech e das instituições envolvidas.</li>
-<li><strong>Ampliação da articulação comunitária</strong>, com fortalecimento da identidade institucional da Guarda Mirim e da NCS e aproximação entre universidade e bairro Aeroporto.</li>
+<li>Formação de todos os educadores sociais da Guarda Mirim (sede) e,
+quando possível, de outras unidades da Guarda em cultura maker,
+letramento digital e metodologia científica.</li>
+<li>Engajamento de 60 educandos em projetos interdisciplinares que
+desenvolvam criatividade, pensamento crítico e competências
+socioemocionais.</li>
+<li>Produção de um repositório de materiais abertos, incluindo
+apostilas, kits de projetos, relatos de experiência e vídeos
+didáticos.</li>
+<li>Desenvolvimento de pelo menos quatro projetos interdisciplinares
+apresentados em mostra pública, com potencial de replicação.</li>
+<li>Publicação de artigos científicos e relatos em eventos de extensão e
+educação, fortalecendo a visibilidade do Guarda Mirim Tech e das
+instituições envolvidas.</li>
+<li>Ampliação da articulação comunitária, com fortalecimento da
+identidade institucional da Guarda Mirim, NCS, E‑letro e CRC‑PR e
+aproximação entre universidade e bairro Aeroporto.</li>
 </ul>
-
-<h2>9. Estratégia de avaliação</h2>
+<h2 id="estratégia-de-avaliação">8. Estratégia de avaliação</h2>
 <p>Serão utilizadas abordagens quantitativas e qualitativas:</p>
 <ul>
-<li><strong>Questionários pré e pós‑formação:</strong> para medir a evolução dos conhecimentos e percepções dos educadores e educandos.</li>
-<li><strong>Observação participante e diários reflexivos:</strong> coordenados por Darcísio Muraro, para analisar as mudanças na prática pedagógica e nas interações.</li>
-<li><strong>Análise dos produtos finais:</strong> protótipos, relatórios e materiais multimídia serão avaliados quanto à criatividade, pertinência social e integração de conhecimentos, com uso de rubricas definidas na Fase I.</li>
-<li><strong>Indicadores de participação e impacto social:</strong> número de inscritos, frequência, permanência nos módulos, representatividade de gênero e raça, participação comunitária nos eventos, reutilização de materiais e sustentabilidade dos projetos.</li>
+<li><strong>Questionários pré e pós‑formação:</strong> para medir a
+evolução dos conhecimentos e percepções dos educadores e educandos.</li>
+<li><strong>Observação participante e diários reflexivos:</strong>
+coordenados por docentes da UEL e da UTFPR, para analisar as mudanças na
+prática pedagógica e nas interações.</li>
+<li><strong>Análise dos produtos finais:</strong> protótipos, relatórios
+e materiais multimídia serão avaliados quanto à criatividade,
+pertinência social e integração de conhecimentos, com uso de rubricas
+definidas na Fase I.</li>
+<li><strong>Indicadores de participação e impacto social:</strong>
+número de inscritos, frequência, permanência nos módulos,
+representatividade de gênero e raça, participação comunitária nos
+eventos, reutilização de materiais e sustentabilidade dos projetos.</li>
 </ul>
-
-<h2>10. Sustentabilidade e desdobramentos</h2>
-<p>Ao final do primeiro ciclo pretende‑se consolidar o Guarda Mirim Tech como <strong>espaço permanente</strong> de inovação pedagógica da Guarda Mirim. A formação de multiplicadores permitirá que os próprios educadores sociais conduzam novas turmas. O repositório de materiais ficará disponível para outras instituições e poderá subsidiar projetos semelhantes em escolas públicas de Londrina. As experiências e dados coletados servirão de base para futuras pesquisas acadêmicas e propostas de políticas públicas de inclusão digital.</p>
-
-<h2>11. Integração com a UEL e redes externas</h2>
-<p>O programa articula <strong>quatro centros de estudo da UEL</strong> (CTU, CCE, CECA e CCB) e promove a interação entre ensino, pesquisa e extensão. A participação de licenciandos proporciona vivência docente em ambiente informal e fortalece os vínculos com a comunidade. O envolvimento da NCS e da Eletro traz a perspectiva de inovação social e sustentabilidade, enquanto a Guarda Mirim expande suas ações formativas. Ao dialogar com os conceitos de educação maker, filosofia da educação e ensino de ciências, a proposta contribui para consolidar Londrina como referência em educação popular técnica e inovação pedagógica.</p>
-
-<h2>12. Vinculação aos Objetivos de Desenvolvimento Sustentável (ODS)</h2>
-<p>Esta proposta está alinhada aos <strong>Objetivos de Desenvolvimento Sustentável (ODS)</strong> da Agenda 2030, que orientam ações globais para erradicação da pobreza, proteção do planeta e prosperidade para todos. Para dar foco e equilíbrio na comunicação, priorizamos os quatro objetivos que mais dialogam com a essência do Guarda Mirim Tech:</p>
-<ul class="ods-list">
-  <!-- Cada objetivo da Agenda 2030 é representado por um círculo colorido seguido da descrição correspondente -->
-  <li>
-    <span class="ods-img ods4"></span>
-    <span><strong>ODS 4 – Educação de Qualidade:</strong> a formação intergeracional e inclusiva para educadores sociais, licenciandos e educandos promove aprendizagem ao longo da vida e aprimora a qualidade da educação.</span>
-  </li>
-  <li>
-    <span class="ods-img ods9"></span>
-    <span><strong>ODS 9 – Indústria, Inovação e Infraestrutura:</strong> ao fortalecer o Guarda Mirim Tech como espaço de inovação social e tecnológica, o programa estimula a prototipagem de soluções e o desenvolvimento de infraestrutura comunitária resiliente.</span>
-  </li>
-  <li>
-    <span class="ods-img ods10"></span>
-    <span><strong>ODS 10 – Redução das Desigualdades:</strong> ampliando a inclusão digital e oferecendo oportunidades formativas para jovens de contextos socialmente vulneráveis, a iniciativa contribui para diminuir as desigualdades regionais.</span>
-  </li>
-  <li>
-    <span class="ods-img ods12"></span>
-    <span><strong>ODS 12 – Consumo e Produção Responsáveis:</strong> a parceria com a Eletro incentiva a reutilização de materiais eletrônicos e práticas de economia circular, reforçando a dimensão sustentável da fabricação digital.</span>
-  </li>
-</ul>
-
-<div class="footnotes">
-<ol>
-<li id="fn1">Baseado no artigo que reflete sobre a evolução da educação maker no Brasil e destaca a democratização do aprendizado e a necessidade de formação contínua de educadores. <a href="#fnref1" title="Retornar ao texto">↩</a></li>
-<li id="fn2">Relata atributos comuns às metodologias de design thinking aplicadas a makerspaces, como foco no brincar, na empatia, na mentalidade empreendedora e na possibilidade de falhar e aprender; destaca que modelos como Launch Cycle e uTEC Maker levam os participantes desde a conscientização do problema até a apresentação do produto final, promovendo a progressão de competências e a colaboração. <a href="#fnref2" title="Retornar ao texto">↩</a></li>
-<li id="fn3">Salienta que a adoção de modelos de design thinking requer planejamento, financiamento adequado e estrutura de avaliação clara; a ausência de avaliação dos estudantes frequentemente decorre de projetos mal estruturados, não da natureza dos makerspaces. <a href="#fnref3" title="Retornar ao texto">↩</a></li>
-<li id="fn4">Resume a formação e a área de atuação de Paulo Bassani, destacando sua graduação em Filosofia, mestrado em Sociologia, doutorado em Ciências Sociais e experiência em sociologia ambiental, sustentabilidade, educação ambiental e movimentos sociais. <a href="#fnref4" title="Retornar ao texto">↩</a></li>
-<li id="fn5">Explica que, segundo nota da Pró‑Reitoria de Extensão da UEL, a regulamentação da curricularização da extensão (Resolução CEPE/CA nº 039/2021) permite que ações permanentes sejam registradas diretamente como programas, sem necessidade de vinculação a projetos【970362477089349†L180-L188】. <a href="#fnref5" title="Retornar ao texto">↩</a></li>
-<li id="fn6">Descreve a trajetória de Maria Bernadete de Morais França: engenheira eletricista com graduação e mestrado pela Universidade Federal da Paraíba e doutorado pela Unicamp; docente da UEL desde 2003 e coordenadora do doutorado UEL/UTFPR em Engenharia Elétrica; suas pesquisas englobam microcontroladores, sensores para agricultura, instrumentação eletrônica, IoT e robótica educacional; participa de eventos como ROBOLON e iniciativas de inclusão como o projeto Techninas【559313842064646†L78-L96】【809013959985734†L99-L102】. <a href="#fnref6" title="Retornar ao texto">↩</a></li>
+<h2 id="sustentabilidade-e-desdobramentos">9. Sustentabilidade e
+desdobramentos</h2>
+<p>Ao final do primeiro ciclo pretende‑se consolidar o Guarda Mirim Tech
+como espaço permanente de inovação pedagógica da Guarda Mirim. A
+formação de multiplicadores permitirá que educadores sociais conduzam
+novas turmas. O repositório de materiais ficará disponível para outras
+instituições e poderá subsidiar projetos semelhantes em escolas públicas
+de Londrina. As experiências e dados coletados servirão de base para
+futuras pesquisas acadêmicas e propostas de políticas públicas de
+inclusão digital. A parceria com o CRC‑PR, articulada pela NCS e pela
+E‑letro, possibilitará captar recursos adicionais e ampliar a
+certificação dos participantes, contribuindo para a sustentabilidade
+financeira do programa.</p>
+<h2 id="integração-com-a-uel-utfpr-e-redes-externas">10. Integração com
+a UEL, UTFPR e redes externas</h2>
+<p>O programa articula quatro centros de estudo da UEL (CTU, CCE, CECA e
+CCB) e unidades acadêmicas da UTFPR, promovendo a interação entre
+ensino, pesquisa e extensão. A participação de licenciandos de ambas as
+instituições proporciona vivência docente em ambiente informal e
+fortalece os vínculos com a comunidade. O envolvimento da NCS, da
+E‑letro e do CRC‑PR traz a perspectiva de inovação social e economia
+circular, enquanto a Guarda Mirim expande suas ações formativas como
+co‑executora. Ao dialogar com os conceitos de educação maker, filosofia
+da educação e ensino de ciências, a proposta contribui para consolidar
+Londrina como referência em educação popular técnica e inovação
+pedagógica.</p>
+<h2 id="vinculação-aos-objetivos-de-desenvolvimento-sustentável-ods">11.
+Vinculação aos Objetivos de Desenvolvimento Sustentável (ODS)</h2>
+<p>A proposta está alinhada aos Objetivos de Desenvolvimento Sustentável
+da Agenda 2030. Para dar foco e equilíbrio na comunicação, priorizamos
+quatro ODS que dialogam com a essência do Guarda Mirim Tech:</p>
+<ol type="1">
+<li><strong>ODS 4 – Educação de Qualidade:</strong> a formação
+intergeracional e inclusiva para educadores sociais, licenciandos e
+educandos promove aprendizagem ao longo da vida e aprimora a qualidade
+da educação.</li>
+<li><strong>ODS 9 – Indústria, Inovação e Infraestrutura:</strong> ao
+fortalecer o Guarda Mirim Tech como espaço de inovação social e
+tecnológica, o programa estimula a prototipagem de soluções e o
+desenvolvimento de infraestrutura comunitária resiliente.</li>
+<li><strong>ODS 10 – Redução das Desigualdades:</strong> ampliando a
+inclusão digital e oferecendo oportunidades formativas para jovens de
+contextos vulneráveis, a iniciativa contribui para diminuir as
+desigualdades regionais.</li>
+<li><strong>ODS 12 – Consumo e Produção Responsáveis:</strong> a
+parceria com a E‑letro incentiva a reutilização de materiais eletrônicos
+e práticas de economia circular, reforçando a dimensão sustentável da
+fabricação digital.</li>
 </ol>
-</div>
-</div>
+<hr />
+<p>Esta via consolidada integra o texto originalmente proposto ao mesmo
+tempo que incorpora as inclusões posteriores, como o protagonismo da
+Guarda Mirim e o papel da UTFPR na coordenação acadêmica. A participação
+integrada da GML, NCS, E‑letro, CRC‑PR, UEL e UTFPR garante que o
+Guarda Mirim Tech seja simultaneamente um laboratório de cultura maker,
+um programa de formação profissional e um catalisador de inovação social
+para Londrina.</p>
 </body>
 </html>
